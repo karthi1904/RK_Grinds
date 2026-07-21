@@ -23,7 +23,7 @@ const translations = {
         calcDesc: "நீங்கள் கொண்டு வரும் பொருட்களின் அளவை (கிலோ) உள்ளிடவும்",
         calcLabel: "<strong>Total fair:</strong>",
         calcPlaceholder: "உதாரணம்: 5",
-        calcNote: "* இது ஒரு தோராயமான கட்டணம் மட்டுமே. (1 கிலோவிற்கு ₹25 என கணக்கிடப்பட்டுள்ளது)",
+        calcNote: "* இது ஒரு தோராயமான கட்டணம் மட்டுமே. (1 கிலோவிற்கு ₹30 என கணக்கிடப்பட்டுள்ளது)",
         calcResultMsg: "தோராயமான கட்டணம்: ",
         footerTitle: "RK Grinds - மாவு அரைப்பகம்",
         footerDesc: "சிறந்த சேவைக்கு எங்களை அணுகவும்.",
@@ -54,7 +54,7 @@ const translations = {
         calcDesc: "Enter the total weight of your ingredients (in kg)",
         calcLabel: "<strong>Total fair:</strong>",
         calcPlaceholder: "Example: 5",
-        calcNote: "* This is an estimated cost. (Calculated at ₹25 per kg)",
+        calcNote: "* This is an estimated cost. (Calculated at ₹30 per kg)",
         calcResultMsg: "Estimated Cost: ",
         footerTitle: "RK Grinds - Wet Grinding Service",
         footerDesc: "Contact us for the best service.",
@@ -106,7 +106,7 @@ function switchLanguage(lang) {
 
 function calculatePrice() {
     const kg = document.getElementById('kgInput').value;
-    const pricePerKg = 25; // Updated price per kg to 25rs
+    const pricePerKg = 30; // Updated price per kg to 30rs
     const resultDiv = document.getElementById('result');
     
     if (kg && kg > 0) {
