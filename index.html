@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="docTitle">RK Grinds - பாரம்பரிய மாவு அரைப்பகம்</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1 id="brandText">RK Grinds</h1>
+        <nav>
+            <a href="#home" id="navHome">முகப்பு</a>
+            <a href="#services" id="navServices">எங்கள் சேவை</a>
+            <a href="#calculator" id="navCalc">கட்டணம் அறிய</a>
+            <a href="#contact" id="navContact">தொடர்புக்கு</a>
+            <select id="langSwitch" onchange="switchLanguage(this.value)">
+                <option value="ta">தமிழ்</option>
+                <option value="en">English</option>
+            </select>
+            <button id="themeToggle" onclick="toggleTheme()">🌙 இரவு</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2 id="heroTitle">உங்கள் பொருட்கள்! எங்கள் உழைப்பு!</h2>
+        <p id="heroDesc">நீங்கள் அரிசி, உளுந்து மற்றும் வெந்தயம் ஆகியவற்றைக் கொண்டு வாருங்கள். எங்களிடம் உள்ள இரண்டு
+            பிரத்யேக கிரைண்டர்கள் மூலம், உங்கள் கண்முன்னே சுத்தமாகவும், சரியான பதத்திலும் இட்லி, தோசை, வடைக்கு மாவு
+            அரைத்துத் தருகிறோம்.</p>
+        <button class="btn" id="heroBtn" onclick="document.getElementById('calculator').scrollIntoView();">கட்டணத்தை
+            கணக்கிட</button>
+    </section>
+
+    <!-- How it works -->
+    <section id="services" class="process">
+        <h3 id="processTitle">நாங்கள் செயல்படும் விதம்</h3>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-icon">🍚</div>
+                <h4 id="step1Title">1. பொருட்களைக் கொடுங்கள்</h4>
+                <p id="step1Desc">உங்களுக்குத் தேவையான அரிசி, உளுந்து ஆகியவற்றை ஊறவைத்துக் கொண்டு வாருங்கள்.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">⚙️</div>
+                <h4 id="step2Title">2. நாங்கள் அரைக்கிறோம்</h4>
+                <p id="step2Desc">எங்களின் இரண்டு தரமான கல் கிரைண்டர்களில் சுத்தமான முறையில் அரைக்கப்படும்.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">✨</div>
+                <h4 id="step3Title">3. மாவை எடுத்துச் செல்லுங்கள்</h4>
+                <p id="step3Desc">வீட்டுப் பக்குவத்தில் அருமையான மாவை நீங்கள் பெற்றுச் செல்லலாம்.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator -->
+    <section id="calculator" class="calculator-section">
+        <h3 id="calcTitle">அரைப்பதற்கான தோராயமான கட்டணம்</h3>
+        <p id="calcDesc">நீங்கள் கொண்டு வரும் பொருட்களின் அளவை (கிலோ) உள்ளிடவும்</p>
+
+        <div class="calculator-box">
+            <label for="kgInput" id="calcLabel"><strong>Total fair:</strong></label><br>
+            <input type="number" id="kgInput" placeholder="உதாரணம்: 5" min="1" oninput="calculatePrice()">
+            <div id="result"></div>
+            <p id="calcNote" style="font-size: 12px; color: var(--note-text); margin-top: 15px;">* இது ஒரு தோராயமான
+                கட்டணம் மட்டுமே. (1 கிலோவிற்கு ₹25 என கணக்கிடப்பட்டுள்ளது)</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="contact">
+        <footer>
+            <h3 id="footerTitle">RK Grinds - மாவு அரைப்பகம்</h3>
+            <p id="footerDesc">சிறந்த சேவைக்கு எங்களை அணுகவும்.</p>
+            <p id="footerPhone"><strong>தொடர்புக்கு:</strong> +91 9245275426, +91 8012647629</p>
+            <p id="footerLoc"><strong>இடம்:</strong> 11/34, மணி மண்டப சாலை, மன்னார் பிள்ளை தெரு, காந்தி மார்க்கெட், திருச்சிராப்பள்ளி - 620008, தமிழ்நாடு, இந்தியா</p>
+            <br>
+            <p id="rightsText">&copy; 2026 <span>RK Grinds</span>. All Rights Reserved.</p>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
